@@ -1,0 +1,13 @@
+{
+  "name": "frontend-claude-plugins",
+  "owner": {
+    "name": "binghuis"
+  },
+  "plugins": [
+    {
+      "name": "frontend-toolkit",
+      "source": "./frontend-toolkit",
+      "description": "前端 AI 工具包：commit/changelog/code-review/fsd 等"
+    }
+  ]
+}
