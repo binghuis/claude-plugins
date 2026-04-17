@@ -9,4 +9,4 @@ disable-model-invocation: true
 1. `changelog` — 生成变更记录
 2. `push` — 拆分提交并推送
 
-每次只传业务上下文，不复述步骤；完成后转述 push 的结果。
+每次传的上下文只包含已暂存文件，不复述步骤；完成后转述 push 的结果。

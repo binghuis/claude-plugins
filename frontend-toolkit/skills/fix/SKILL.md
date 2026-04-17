@@ -1,6 +1,7 @@
 ---
 name: fix
-description: 用户报告 bug、发截图、或说"fix"/"修复"/"解决这个问题"时触发
+description: Bug 修复流程：分析问题、输出方案、等待用户确认后再改代码
+disable-model-invocation: true
 ---
 
 # Bug 修复

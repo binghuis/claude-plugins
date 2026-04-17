@@ -1,6 +1,6 @@
 ---
 name: react-design
-description: 编写组件和 Hook 时应用
+description: 设计或修改任何 React 组件、自定义 Hook 前必须先加载并严格遵守
 ---
 
 # 组件与 Hook 设计

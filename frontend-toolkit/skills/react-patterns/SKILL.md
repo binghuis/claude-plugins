@@ -1,6 +1,6 @@
 ---
 name: react-patterns
-description: 编写 React 代码时应用
+description: 编写或修改任何 React 代码前必须先加载并严格遵守
 ---
 
 # React 编码模式

@@ -1,18 +1,21 @@
 ---
 name: daily
-description: 当用户开启"当天开发当天上线"任务需要建新分支时使用，基于最新 origin/main 创建 release/MM-DD 分支
+description: 切到当日 release/MM-DD 分支；不存在则基于最新 origin/main 新建。用于当天开发当天上线
 disable-model-invocation: true
 ---
 
 ## 步骤
 
-1. `git status --porcelain` 非空 → 中止，让用户先 commit / stash
-2. `git fetch origin main`
-3. `git checkout -b release/$(date +%m-%d) origin/main`
-4. 打印新分支名与所基 commit（`git log -1 --oneline origin/main`）
+```sh
+BR=release/$(date +%m-%d)
+```
+
+1. **检查工作区**：`git status --porcelain` 非空 → 中止，提示用户先 commit / stash，不自动处理
+2. **分支已存在**（`git rev-parse --verify $BR` 成功）→ `git checkout $BR`，打印分支名与当前 HEAD，结束
+3. **分支不存在** → `git fetch origin main` → `git checkout -b $BR origin/main`，打印分支名与所基 commit（`git log -1 --oneline origin/main`）
 
 ## 约束
 
-- 始终以 `origin/main` 为基，不 checkout 本地 main
-- 分支已存在 → 报错终止，提示用户直接切过去
+- 新建时基于远端最新 `origin/main`，不用本地 main
+- 已存在的分支只切过去，不 reset、不重建、不 rebase
 - 不自动 stash、不 push、不建 upstream
