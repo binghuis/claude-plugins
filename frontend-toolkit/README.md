@@ -14,3 +14,4 @@
 - **[react-design](skills/react-design/SKILL.md)**：写/改 React 组件或 Hook 必读，严守单一职责与 UI/逻辑分离
 - **[react-patterns](skills/react-patterns/SKILL.md)**：写或改 React/TSX 必读，覆盖 key 重置、禁 any/as、联合类型消灭非法状态、四态覆盖
 - **[skill-gen](skills/skill-gen/SKILL.md)**：新建 skill：问清主场景后，弹窗收 name/模式/落盘位置，按规范产出 `SKILL.md`
+- **[skill-improve](skills/skill-improve/SKILL.md)**：按 skill-gen 规范对照已有 skill 的 `SKILL.md`，列改动表经确认后一次改完
