@@ -1,6 +1,6 @@
 # binghuis-plugins
 
-个人维护的 Claude Code 插件市场（marketplace），收录日常高频使用的 skill / hook 集合。
+个人维护的 Claude Code 插件市场，收录日常高频使用的 skill 集合。
 
 ## 安装
 
