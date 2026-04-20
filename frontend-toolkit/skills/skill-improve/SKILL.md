@@ -1,6 +1,6 @@
 ---
 name: skill-improve
-description: 按 skill-gen 规范对照 <name> 的 SKILL.md，列改动表经确认后改
+description: 按 skill-gen 规范审查项目级 <name> 的 SKILL.md，列违反表经确认后改
 disable-model-invocation: true
 ---
 
