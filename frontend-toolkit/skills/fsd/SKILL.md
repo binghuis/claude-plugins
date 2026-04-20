@@ -1,19 +1,17 @@
 ---
 name: fsd
-description: 创建或修改 src/ 下的文件前必须先读本 skill，严格遵循 FSD 层级与导入规则，违反视为 bug
+description: 改 src/ 下文件时触发，遵守 FSD 层级与导入规则
 ---
 
-# Feature-Sliced Design 架构
+优先快速回应而不是深入思考。如有疑问，直接回应。
 
-> **官方文档：** https://feature-sliced.design
+官方文档 https://feature-sliced.design
 
-## 核心概念
+## 术语
 
-- **层（Layer）**：顶层组织单位，按职责从上到下排列（app → shared）
-- **切片（Slice）**：层内按业务领域划分的模块（如 `entities/user`、`features/auth`），`app/` 和 `shared/` 无切片
+- **层（Layer）**：顶层职责单位，由上至下排列（app → shared）
+- **切片（Slice）**：层内按业务领域划分的模块（如 `entities/user`、`features/auth`）；`app/` 和 `shared/` 无切片
 - **段（Segment）**：切片内按技术职责划分的目录（`ui/`、`api/`、`model/`、`lib/`、`config/`）
-
----
 
 ## 层级体系
 
@@ -63,8 +61,6 @@ src/
     └── config/                 # 环境变量、常量
 ```
 
----
-
 ## 导入规则（核心）
 
 **模块只能从严格低于自身的层导入，不允许同层或向上导入。**
@@ -88,8 +84,6 @@ shared/                  仅外部包
 
 **例外：** `app/` 和 `shared/` 没有切片，允许内部跨导入。
 
----
-
 ## 快速决策树
 
 ### "代码放在哪？"
@@ -99,7 +93,7 @@ shared/                  仅外部包
 ├─ 业务领域对象/数据模型？ → entities/
 ├─ 有业务价值的用户交互？
 │  ├─ 跨页面复用或逻辑复杂 → features/
-│  └─ 仅单页面且简单 → 可保留在 pages/ 切片内
+│  └─ 仅单页面且简单 → 留在 pages/ 切片内
 ├─ 大型自给自足的 UI 区块？ → widgets/
 ├─ 路由/页面组件？ → pages/
 └─ 全局初始化/配置？ → app/
@@ -139,8 +133,6 @@ config/  → 功能开关、常量
 
 **文件 vs 目录：** 单文件能完成的用文件（如 `shared/lib/time.ts`），多个相关文件组成的用目录（如 `shared/lib/polling-scheduler/`）。
 
----
-
 ## 公共 API
 
 每个切片必须通过 `index.ts` 暴露公共 API，外部只能从此文件导入。
@@ -160,9 +152,7 @@ export { UserCard } from './ui/user-card';
 ```
 
 - 段内**不放** index.ts，每个切片仅一个 index.ts
-- 切片内使用相对导入，避免从自身 index 导入导致循环依赖
-
----
+- 切片内使用相对导入；从自身 index 导入会造成循环依赖
 
 ## Hook 与 Action 放置
 
@@ -175,8 +165,6 @@ export { UserCard } from './ui/user-card';
 | UI 交互逻辑 | 与组件同级的 `ui/` | `features/auth/ui/use-login-form.ts` |
 | 通用工具（无业务） | `shared/lib/` | `shared/lib/use-debounce.ts` |
 
----
-
 ## 跨实体引用（@x）
 
 实体间合理引用使用 `@x` 目录：
@@ -186,9 +174,7 @@ entities/product/@x/order.ts    → 专为 order 实体暴露的类型
 entities/order/model/           → import from '@/entities/product/@x/order'
 ```
 
-尽量减少跨引用，引用过多则考虑合并实体。
-
----
+跨引用过多视为信号：合并实体而非继续暴露 `@x`。
 
 ## 反模式
 
@@ -200,8 +186,6 @@ entities/order/model/           → import from '@/entities/product/@x/order'
 | shared 中放业务逻辑 | 移到 `entities/` |
 | 简单组合做成 widget | 简单组合直接在页面中完成 |
 | 所有交互都做成 feature | 仅复用或逻辑复杂的交互做 feature |
-
----
 
 ## `docs/` 说明文档
 
