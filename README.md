@@ -1,6 +1,6 @@
-# frontend-claude-plugins
+# binghuis-plugins
 
-面向前端开发者的 Claude Code 插件市场（marketplace），收录日常高频使用的 skill / hook 集合。
+个人维护的 Claude Code 插件市场（marketplace），收录日常高频使用的 skill / hook 集合。
 
 ## 安装
 
@@ -9,15 +9,15 @@
 ```json
 {
   "extraKnownMarketplaces": {
-    "frontend-claude-plugins": {
+    "binghuis-plugins": {
       "source": {
         "source": "git",
-        "url": "ssh://git@github.com/binghuis/frontend-claude-plugins.git"
+        "url": "ssh://git@github.com/binghuis/binghuis-plugins.git"
       }
     }
   },
   "enabledPlugins": {
-    "frontend-toolkit@frontend-claude-plugins": true
+    "frontend-toolkit@binghuis-plugins": true
   }
 }
 ```
@@ -28,7 +28,7 @@ marketplace 源为 git 仓库，更新即拉取最新 commit：
 
 ```
 /plugin marketplace update                          # 更新所有市场
-/plugin marketplace update frontend-claude-plugins  # 仅更新本市场
+/plugin marketplace update binghuis-plugins  # 仅更新本市场
 ```
 
 CLI 等价命令：

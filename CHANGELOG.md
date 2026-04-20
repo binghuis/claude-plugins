@@ -9,3 +9,4 @@
 
 ### 优化
 - 精修 changelog、code-review、comment、daily、fix、fsd、push、react-design、react-patterns 等 skill 的描述与流程，表达更简洁、触发条件更清晰、使用时更省心
+- 市场更名为 `binghuis-plugins`，定位从"面向前端"调整为"个人维护"，现有用户需同步更新 `settings.json` 中的市场名与仓库地址
