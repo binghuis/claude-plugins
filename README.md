@@ -4,15 +4,27 @@
 
 ## 安装
 
-在项目或用户级 `.claude/settings.json` 中添加：
+### 用户级（推荐）
+
+在 Claude Code 中执行：
+
+```
+/plugin marketplace add binghuis/claude-plugins
+```
+
+随后 `/plugin` 选择启用 `frontend-toolkit`。
+
+### 项目级
+
+在项目 `.claude/settings.json` 中添加：
 
 ```json
 {
   "extraKnownMarketplaces": {
     "binghuis-plugins": {
       "source": {
-        "source": "git",
-        "url": "ssh://git@github.com/binghuis/binghuis-plugins.git"
+        "source": "github",
+        "repo": "binghuis/claude-plugins"
       }
     }
   },
@@ -21,29 +33,6 @@
   }
 }
 ```
-
-## 更新
-
-marketplace 源为 git 仓库，更新即拉取最新 commit：
-
-```
-/plugin marketplace update                          # 更新所有市场
-/plugin marketplace update binghuis-plugins  # 仅更新本市场
-```
-
-CLI 等价命令：
-
-```bash
-claude plugin marketplace update
-```
-
-查看已安装插件及版本：
-
-```
-/plugin list
-```
-
-执行后立即生效，无需清理缓存或重启（缓存位于 `~/.claude/plugins/`）。
 
 ## 包含的插件
 
