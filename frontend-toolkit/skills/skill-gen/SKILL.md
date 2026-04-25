@@ -54,12 +54,6 @@ disable-model-invocation: true
 - 能用表格不用列表，能用列表不用段落
 - 超 500 行拆到 `references/<topic>.md`
 
-### 交互硬规则
-
-可枚举选项走 `AskUserQuestion`；相关决策合并进一次弹窗。
-
-判别："能给出几个候选吗？" 能 → 弹窗；不能 → 文本。
-
 ### 正面范式优先
 
 - 风格 / 写法 → 用 ✓ 范式或对照
@@ -70,4 +64,3 @@ disable-model-invocation: true
 | description 不要用"帮助用户…""提供…" | description 用强祈使句 + 触发条件 |
 | 不要解释 "skill 是什么""如何被加载" | 直接给指令，不讲元信息 |
 | 不要用装饰性 emoji、分隔线、冗余标题、纯强调用的加粗斜体 | 标题只用于分节，强调靠措辞不靠样式 |
-| markdown 列表堆问题 | `AskUserQuestion` 弹窗 |
