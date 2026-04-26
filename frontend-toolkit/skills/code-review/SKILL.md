@@ -54,3 +54,4 @@ disable-model-invocation: true
 ## 硬规则
 
 - 说不清"什么场景会出事"就不报
+- 可改可不改的不报
