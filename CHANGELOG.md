@@ -2,6 +2,9 @@
 
 ## 2026-04-27
 
+### 新增
+- 恢复 fix skill（仅手动调用，`disable-model-invocation: true`）：手动让 Claude 走「分析 → 方案 A/B → 确认后改代码」的固定流程
+
 ### 优化
 - skill-improve 违反点表收紧：可改可不改的不算违反点，避免凑数列出主观偏好
 
