@@ -36,4 +36,4 @@
 
 ## 包含的插件
 
-- **[frontend-toolkit](frontend-toolkit/README.md)** — 前端日常 skill 集合，覆盖分支管理、提交/推送、冲突解决、changelog、code review、bug 定位、注释、FSD 架构、React 设计与模式、skill 脚手架等场景
+- **[frontend-toolkit](frontend-toolkit/README.md)** — 前端日常 skill 集合，覆盖提交/推送、冲突解决、changelog、code review、bug 定位、注释、FSD 架构、React 设计与模式、skill 脚手架等场景
