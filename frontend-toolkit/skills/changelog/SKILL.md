@@ -72,7 +72,9 @@ disable-model-invocation: true
 
 8. 标"最近一次更新"：
 
-    - 清：写入前扫最近两个 `## YYYY-MM-DD` 块，把已有的 `- **正文**` 还原成 `- 正文`
-    - 加：本次新写入的 bullet 写成 `- **正文**`
+    | 阶段 | 操作 |
+    |---|---|
+    | 清 | 写入前扫最近两个 `## YYYY-MM-DD` 块，把已有的 `- **正文**` 还原成 `- 正文` |
+    | 加 | 本次新写入的 bullet 写成 `- **正文**` |
 
 9. 写入 `CHANGELOG.md` 并 `git add CHANGELOG.md`。
