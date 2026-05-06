@@ -5,9 +5,19 @@
   },
   "plugins": [
     {
-      "name": "frontend-toolkit",
-      "source": "./frontend-toolkit",
+      "name": "frontend",
+      "source": "./frontend",
       "description": "前端 AI 工具包：commit/changelog/code-review/fsd 等"
+    },
+    {
+      "name": "talent",
+      "source": "./talent",
+      "description": "AI 时代工程师人才评估工具包：标准本体 + 简历筛选"
+    },
+    {
+      "name": "meta",
+      "source": "./meta",
+      "description": "Skill 元工具：新建 / 审查 SKILL.md"
     }
   ]
 }

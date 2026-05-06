@@ -1,10 +1,19 @@
 # Changelog
 
+## 2026-05-06
+
+### 新增
+- **新增 talent 插件，AI 时代工程师人才评估工具包：talent-model 给出三档定价/级别画像/proxy 信号/反信号；screen-resume-junior / mid / senior 三档分别从 PDF 简历挖学习曲线、问题定义、架构判断信号**
+- **新增 meta 插件，收纳 Claude Code 元工具 skill-gen / skill-improve（自 frontend-toolkit 迁出）**
+
+### 优化
+- **原 frontend-toolkit 插件更名为 frontend，老用户需在 settings.json 把 `frontend-toolkit@binghuis-plugins` 改为 `frontend@binghuis-plugins`，并按需启用 `talent@binghuis-plugins` / `meta@binghuis-plugins`**
+
 ## 2026-04-28
 
 ### 优化
-- **docs skill 写作原则明确多分支流转改用 Mermaid 渲染、禁用 ASCII（此前仅写「流程图」未指定形式）**
-- **docs skill 删除「约束」章节模板及「改后违反约束代码让步」规则（此前要求生成约束清单，但前端切片硬约束极少，多产出当前行为描述，导致「代码让步」规则形同虚设）**
+- docs skill 写作原则明确多分支流转改用 Mermaid 渲染、禁用 ASCII（此前仅写「流程图」未指定形式）
+- docs skill 删除「约束」章节模板及「改后违反约束代码让步」规则（此前要求生成约束清单，但前端切片硬约束极少，多产出当前行为描述，导致「代码让步」规则形同虚设）
 
 ## 2026-04-27
 
