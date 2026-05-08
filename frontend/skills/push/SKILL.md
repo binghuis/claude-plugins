@@ -27,7 +27,7 @@ disable-model-invocation: true
    - `git commit`
    - `git add <下一组文件>`
    - 完成后 `git stash pop` 恢复工作区
-7. `git fetch origin` → `git push`（无上游加 `-u origin HEAD`）；失败或本地落后 → 提示用户先 pull
+7. `git push`（无上游加 `-u origin HEAD`）；被拒于落后 → `git pull --rebase` → `git push`；冲突走 `pause-for-conflict`
 8. 输出每条 commit 的 hash 和 message
 
 ## Commit 规范
@@ -50,7 +50,5 @@ disable-model-invocation: true
 ## 硬规则
 
 - **只操作用户已暂存的内容，严禁 `git add` 任何未暂存文件**
-- 多组提交前 `git stash --keep-index`，完成后 `git stash pop`
 - 不要 `git push --force`
 - 不要用 `--no-verify` 跳 hooks
-- push 被拒 → 提示用户手动 pull，不要自动 rebase、不要 force push
