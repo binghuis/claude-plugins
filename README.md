@@ -39,5 +39,5 @@
 ## 包含的插件
 
 - **[frontend](frontend/README.md)** — 前端日常 skill 集合，覆盖提交/推送、冲突解决、changelog、code review、bug 定位、注释、FSD 架构、React 设计与模式
-- **[talent](talent/README.md)** — AI 时代工程师人才评估工具包：标准本体（talent-model）+ 三档简历筛选（screen-resume-junior/mid/senior）
+- **[talent](talent/README.md)** — AI 时代工程师人才评估：从简历自动定级 + 出多轮面试方案（talent-model + interview-prep）
 - **[meta](meta/README.md)** — Skill 元工具：新建 / 审查 SKILL.md（skill-gen / skill-improve）
