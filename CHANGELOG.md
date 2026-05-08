@@ -1,13 +1,27 @@
 # Changelog
 
+## 2026-05-08
+
+### 新增
+- **talent 插件 interview-prep skill：输入候选人 PDF（+ 本轮类型可选），输出今天这场的面试方案——候选人画像 + 必问题 + 反向验证 + 好/弱答案样本 + 一页 cheat sheet**
+- **talent 插件 interview-debrief skill：输入面试飞书会议记录（+ 候选人 PDF 可选），自动产出结构化反馈——档位 + 信心度 + 关键证据 + 故事讲述区分 + 疑点 + 给 HR 的下一轮建议**
+
+### 优化
+- **talent 插件 screen-resume 三档（junior/mid/senior）合并为单一 screen-resume，按 talent-model 自动定级 + 信号挖掘，输出 floor 判断（过/边缘/不过）+ 命中正/反信号 + 必看链接 + 面试重点（此前需手动选档；新版只判 floor，不做 ceiling 决策，"值不值得招"留给 hiring committee）**
+- **push skill 推送被拒（本地落后）后自动 `git pull --rebase` 重推，冲突走 pause-for-conflict（此前提示用户手动 pull）**
+- **changelog skill 加规则"不与用户确认，全流程走完"（此前 AI 在归类、合并等步骤可能停下来问，中断流程）**
+
+### 移除
+- **talent-model 独立 skill 下线，迁为 `talent/references/talent-model.md` 文档供其他 talent skill 引用（此前作为可调用 skill 输出标准本体）**
+
 ## 2026-05-06
 
 ### 新增
-- **新增 talent 插件，AI 时代工程师人才评估工具包：talent-model 给出三档定价/级别画像/proxy 信号/反信号；screen-resume-junior / mid / senior 三档分别从 PDF 简历挖学习曲线、问题定义、架构判断信号**
-- **新增 meta 插件，收纳 Claude Code 元工具 skill-gen / skill-improve（自 frontend-toolkit 迁出）**
+- 新增 talent 插件，AI 时代工程师人才评估工具包：talent-model 给出三档定价/级别画像/proxy 信号/反信号；screen-resume-junior / mid / senior 三档分别从 PDF 简历挖学习曲线、问题定义、架构判断信号
+- 新增 meta 插件，收纳 Claude Code 元工具 skill-gen / skill-improve（自 frontend-toolkit 迁出）
 
 ### 优化
-- **原 frontend-toolkit 插件更名为 frontend，老用户需在 settings.json 把 `frontend-toolkit@binghuis-plugins` 改为 `frontend@binghuis-plugins`，并按需启用 `talent@binghuis-plugins` / `meta@binghuis-plugins`**
+- 原 frontend-toolkit 插件更名为 frontend，老用户需在 settings.json 把 `frontend-toolkit@binghuis-plugins` 改为 `frontend@binghuis-plugins`，并按需启用 `talent@binghuis-plugins` / `meta@binghuis-plugins`
 
 ## 2026-04-28
 
