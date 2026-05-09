@@ -10,6 +10,7 @@
 - **[docs](skills/docs/SKILL.md)**：改 `src/` 必读：按切片 `docs/` 的 `related` 同步；用户要求建/补文档时按场景表落盘
 - **[fix](skills/fix/SKILL.md)**：定位 bug 根因，给出方案 A/B，用户确认后再改代码（仅手动调用）
 - **[fsd](skills/fsd/SKILL.md)**：改 `src/` 下文件时触发，遵守 Feature-Sliced Design 层级与导入规则
+- **[orval-react-query](skills/orval-react-query/SKILL.md)**：调接口必读，退化阶梯选调用形式，按规则做缓存失效（需配合 [orval](https://orval.dev) 开源库 + `client: react-query` 使用）
 - **[pause-for-conflict](skills/pause-for-conflict/SKILL.md)**：merge/rebase/cherry-pick/pull 冲突必读，列清两边意图与代价，等用户拍板
 - **[push](skills/push/SKILL.md)**：按业务功能拆分用户暂存区改动并分批 commit 推送到远程，严禁触碰未暂存内容
 - **[react-design](skills/react-design/SKILL.md)**：写/改 React 组件或 Hook 必读，严守单一职责与 UI/逻辑分离

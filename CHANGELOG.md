@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-05-09
+
+### 新增
+- **frontend 插件 orval-react-query skill：调接口必读，给出 hook → 自写 useMutation → 原始函数 的退化阶梯，跳步要在注释里说清原因；并规范缓存默认值、失效时机和乐观更新边界**
+
 ## 2026-05-08
 
 ### 新增
