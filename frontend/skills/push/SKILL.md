@@ -50,5 +50,4 @@ disable-model-invocation: true
 ## 硬规则
 
 - **只操作用户已暂存的内容，严禁 `git add` 任何未暂存文件**
-- 不要 `git push --force`
 - 不要用 `--no-verify` 跳 hooks
