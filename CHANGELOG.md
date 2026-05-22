@@ -1,23 +1,29 @@
 # Changelog
 
+## 2026-05-22
+
+### 新增
+- **flow 插件新增 /do 与 /resume 两个手动命令：/do 跳过澄清和规划直接执行下一步；/resume 回到上一轮被打断、未完成的任务，从断点继续做完**
+- **git 插件 branch-new / branch-switch / dangerous-git 三个 skill 入库：branch-new 自动 stash 后新建分支并切过去；branch-switch 切已有分支并保留 WIP；dangerous-git 在执行破坏性 git 命令前列后果/可逆性/替代，等用户拍板**
+
 ## 2026-05-09
 
 ### 新增
-- **frontend 插件 orval-react-query skill：调接口必读，给出 hook → 自写 useMutation → 原始函数 的退化阶梯，跳步要在注释里说清原因；并规范缓存默认值、失效时机和乐观更新边界**
+- frontend 插件 orval-react-query skill：调接口必读，给出 hook → 自写 useMutation → 原始函数 的退化阶梯，跳步要在注释里说清原因；并规范缓存默认值、失效时机和乐观更新边界
 
 ## 2026-05-08
 
 ### 新增
-- **talent 插件 interview-prep skill：输入候选人 PDF（+ 本轮类型可选），输出今天这场的面试方案——候选人画像 + 必问题 + 反向验证 + 好/弱答案样本 + 一页 cheat sheet**
-- **talent 插件 interview-debrief skill：输入面试飞书会议记录（+ 候选人 PDF 可选），自动产出结构化反馈——档位 + 信心度 + 关键证据 + 故事讲述区分 + 疑点 + 给 HR 的下一轮建议**
+- talent 插件 interview-prep skill：输入候选人 PDF（+ 本轮类型可选），输出今天这场的面试方案——候选人画像 + 必问题 + 反向验证 + 好/弱答案样本 + 一页 cheat sheet
+- talent 插件 interview-debrief skill：输入面试飞书会议记录（+ 候选人 PDF 可选），自动产出结构化反馈——档位 + 信心度 + 关键证据 + 故事讲述区分 + 疑点 + 给 HR 的下一轮建议
 
 ### 优化
-- **talent 插件 screen-resume 三档（junior/mid/senior）合并为单一 screen-resume，按 talent-model 自动定级 + 信号挖掘，输出 floor 判断（过/边缘/不过）+ 命中正/反信号 + 必看链接 + 面试重点（此前需手动选档；新版只判 floor，不做 ceiling 决策，"值不值得招"留给 hiring committee）**
-- **push skill 推送被拒（本地落后）后自动 `git pull --rebase` 重推，冲突走 pause-for-conflict（此前提示用户手动 pull）**
-- **changelog skill 加规则"不与用户确认，全流程走完"（此前 AI 在归类、合并等步骤可能停下来问，中断流程）**
+- talent 插件 screen-resume 三档（junior/mid/senior）合并为单一 screen-resume，按 talent-model 自动定级 + 信号挖掘，输出 floor 判断（过/边缘/不过）+ 命中正/反信号 + 必看链接 + 面试重点（此前需手动选档；新版只判 floor，不做 ceiling 决策，"值不值得招"留给 hiring committee）
+- push skill 推送被拒（本地落后）后自动 `git pull --rebase` 重推，冲突走 pause-for-conflict（此前提示用户手动 pull）
+- changelog skill 加规则"不与用户确认，全流程走完"（此前 AI 在归类、合并等步骤可能停下来问，中断流程）
 
 ### 移除
-- **talent-model 独立 skill 下线，迁为 `talent/references/talent-model.md` 文档供其他 talent skill 引用（此前作为可调用 skill 输出标准本体）**
+- talent-model 独立 skill 下线，迁为 `talent/references/talent-model.md` 文档供其他 talent skill 引用（此前作为可调用 skill 输出标准本体）
 
 ## 2026-05-06
 
