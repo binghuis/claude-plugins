@@ -10,6 +10,11 @@
       "description": "前端 AI 工具包：commit/changelog/code-review/fsd 等"
     },
     {
+      "name": "git",
+      "source": "./git",
+      "description": "git 分支操作工具包：branch/switch/new-branch/release-today"
+    },
+    {
       "name": "talent",
       "source": "./talent",
       "description": "AI 时代工程师人才评估：从简历自动定级 + 出多轮面试方案"
@@ -18,6 +23,11 @@
       "name": "meta",
       "source": "./meta",
       "description": "Skill 元工具：新建 / 审查 SKILL.md"
+    },
+    {
+      "name": "flow",
+      "source": "./flow",
+      "description": "通用工作流指令集：do 等"
     }
   ]
 }

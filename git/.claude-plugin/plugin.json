@@ -1,0 +1,5 @@
+{
+  "name": "git",
+  "version": "0.1.0",
+  "description": "git 分支操作工具包：路由意图到切/新建，自动保 WIP"
+}
