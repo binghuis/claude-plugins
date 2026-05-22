@@ -4,5 +4,5 @@
 
 ## Skills
 
-- **[do](skills/do/SKILL.md)**：跳过澄清与规划，按当前上下文直接执行下一步
-- **[resume](skills/resume/SKILL.md)**：忽略最近的打断与噪声，回到上一轮主任务继续推进
+- **[go](skills/go/SKILL.md)**：跳过澄清与规划，按当前上下文直接执行下一步
+- **[continue](skills/continue/SKILL.md)**：回到上一轮被打断、未完成的任务，从断点继续做

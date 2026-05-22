@@ -3,7 +3,7 @@
 ## 2026-05-22
 
 ### 新增
-- **flow 插件新增 /do 与 /resume 两个手动命令：/do 跳过澄清和规划直接执行下一步；/resume 回到上一轮被打断、未完成的任务，从断点继续做完**
+- **flow 插件新增 /go 与 /continue 两个手动命令：/go 跳过澄清和规划直接执行下一步；/continue 回到上一轮被打断、未完成的任务，从断点继续做**
 - **git 插件 branch-new / branch-switch / dangerous-git 三个 skill 入库：branch-new 自动 stash 后新建分支并切过去；branch-switch 切已有分支并保留 WIP；dangerous-git 在执行破坏性 git 命令前列后果/可逆性/替代，等用户拍板**
 
 ## 2026-05-09

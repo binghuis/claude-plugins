@@ -1,6 +1,6 @@
 ---
-name: resume
-description: 回到上一轮被打断、未完成的任务，从断点继续做完
+name: continue
+description: 回到上一轮被打断、未完成的任务，从断点继续做
 disable-model-invocation: true
 ---
 

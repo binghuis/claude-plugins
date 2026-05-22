@@ -1,5 +1,5 @@
 ---
-name: do
+name: go
 description: 跳过澄清与规划，按当前上下文直接执行下一步
 disable-model-invocation: true
 ---
