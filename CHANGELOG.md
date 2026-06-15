@@ -1,10 +1,15 @@
 # Changelog
 
+## 2026-06-15
+
+### 新增
+- **新增 engineering 插件，AI 工程化全链路工具包；首入 requirement-structuring skill：把产品自然语言需求拆成"确定 / 待澄清 / 可默认"三分，循环澄清到收敛后按业务内聚拆成多份功能文档，下游可直接接开发工作流；变更需求走 diff + 影响范围增量重扫，不全量重跑**
+
 ## 2026-05-22
 
 ### 新增
-- **flow 插件新增 /go 与 /continue 两个手动命令：/go 跳过澄清和规划直接执行下一步；/continue 回到上一轮被打断、未完成的任务，从断点继续做**
-- **git 插件 branch-new / branch-switch / dangerous-git 三个 skill 入库：branch-new 自动 stash 后新建分支并切过去；branch-switch 切已有分支并保留 WIP；dangerous-git 在执行破坏性 git 命令前列后果/可逆性/替代，等用户拍板**
+- flow 插件新增 /go 与 /continue 两个手动命令：/go 跳过澄清和规划直接执行下一步；/continue 回到上一轮被打断、未完成的任务，从断点继续做
+- git 插件 branch-new / branch-switch / dangerous-git 三个 skill 入库：branch-new 自动 stash 后新建分支并切过去；branch-switch 切已有分支并保留 WIP；dangerous-git 在执行破坏性 git 命令前列后果/可逆性/替代，等用户拍板
 
 ## 2026-05-09
 

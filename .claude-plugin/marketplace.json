@@ -28,6 +28,11 @@
       "name": "flow",
       "source": "./flow",
       "description": "通用工作流指令集：do 等"
+    },
+    {
+      "name": "engineering",
+      "source": "./engineering",
+      "description": "AI 工程化全链路：需求结构化 / figma / 测试用例 / 代码生成"
     }
   ]
 }
