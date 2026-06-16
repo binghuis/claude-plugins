@@ -18,7 +18,7 @@
 
 - [ ] 用 Claude SDK 实现 `docs/orchestration.md` 的伪代码骨架
 - [ ] 定义 tool schema：`ask_pm`、`submit_doc`
-- [ ] 定义 structured output JSON schema（对齐 `references/output-schema.md`）
+- [ ] 在 client app 用 Zod 落地 `references/output-schema.md` 的 spec，用作运行时验证
 - [ ] 拿 1 个真实需求跑通端到端：structuring → ask → 拼答案 → 再 structuring → 收敛
 - [ ] 验证：模型有没有绕过 tool 自答？有没有早停 / 不停？追加澄清段后会不会自相矛盾？
 

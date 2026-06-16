@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 在回答之前仔细思考并一步一步来；这个问题比看上去要难。
 
-按 `references/output-schema.md` 产出结构化文档。
+按 `references/output-schema.md` 产出 JSON。
 
 ## 业务 / 非业务过滤
 

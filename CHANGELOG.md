@@ -3,9 +3,10 @@
 ## 2026-06-16
 
 ### 优化
-- **engineering requirement-structuring skill 三分判定原则改为"只问改变架构 / 范围 / 方向的 PM 拍板项"——参数、文案、惯例（如锁定时长、错误提示文案）一律由 AI 默认处理并标注假设（此前所有业务逻辑歧义都进待澄清单，问题量大）**
-- **engineering requirement-structuring skill 业务/非业务过滤口径调整：交互、文案默认由 AI 处理（除非 PM 明示），非需求仅保留"视觉细节"（此前把交互、文案也归非需求，与"PM 明示即需求"的边界不清）**
-- **meta skill-gen 新增规则禁用 ASCII 树（├─ └─）画判定 / 分流分支，统一用嵌套 markdown bullet**
+- engineering requirement-structuring skill 三分判定原则改为"只问改变架构 / 范围 / 方向的 PM 拍板项"——参数、文案、惯例（如锁定时长、错误提示文案）一律由 AI 默认处理并标注假设（此前所有业务逻辑歧义都进待澄清单，问题量大）
+- engineering requirement-structuring skill 业务/非业务过滤口径调整：交互、文案默认由 AI 处理（除非 PM 明示），非需求仅保留"视觉细节"（此前把交互、文案也归非需求，与"PM 明示即需求"的边界不清）
+- meta skill-gen 新增规则禁用 ASCII 树（├─ └─）画判定 / 分流分支，统一用嵌套 markdown bullet
+- **engineering requirement-structuring skill 输出由中文 markdown 模板改为 JSON，字段统一英文化（confirmed / clarifications / defaults / boundaries / exceptions / tasks），下游 SDK 编排可直接解析（此前需正则解析结构化 markdown）**
 
 ## 2026-06-15
 

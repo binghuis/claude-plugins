@@ -16,7 +16,7 @@
 
 | 职责 | 做法 |
 |---|---|
-| 控循环 | 读 structured output 的 `待澄清` 数组，空即收敛 |
+| 控循环 | 读 structured output 的 `clarifications` 数组，空即收敛 |
 | 问人 | 定义 `ask_pm` tool；UI 接住清单展示给用户，回答作为 tool result 回填 |
 | 答案合并 | 把用户答案以追加段的形式拼回原始需求文本，下一轮重新跑 structuring |
 | diff（PRD 新旧对比） | SDK 做文本 diff，把"变化部分"作为新需求文本传给 structuring |
@@ -35,9 +35,9 @@ round_count = 0
 
 while True:
     doc = call_structuring(raw)
-    if not doc.待澄清:
+    if not doc.clarifications:
         break
-    answers = ui.ask_user(doc.待澄清)             # tool-based ask_pm
+    answers = ui.ask_user(doc.clarifications)     # tool-based ask_pm
     raw = raw + "\n\n## 已澄清\n" + format_answers(answers)
     round_count += 1
     if round_count > 5:
@@ -46,18 +46,18 @@ while True:
 save(doc)   # 拆分留给后续 skill
 ```
 
-每轮把"已澄清"段追加到原始需求 → skill 重新全量结构化 → 已被答过的问题不会再出现在 `待澄清` → 自然收敛。
+每轮把"已澄清"段追加到原始需求 → skill 重新全量结构化 → 已被答过的问题不会再出现在 `clarifications` → 自然收敛。
 
 ## Structured output
 
-每次调用强制输出 JSON，schema 对齐 `output-schema.md`：
+每次调用强制输出 JSON，spec 见 `references/output-schema.md`（client app 用 Zod 验证）：
 
 ```json
 {
-  "已确定": [{ "id": "R1", ... }, ...],
-  "待澄清": [{ "id": "Q1", ... }, ...],
-  "可默认": [{ "id": "D1", ... }, ...]
+  "confirmed":      [{ "id": "R1", ... }, ...],
+  "clarifications": [{ "id": "Q1", ... }, ...],
+  "defaults":       [{ "id": "D1", ... }, ...]
 }
 ```
 
-字段细节见 `output-schema.md`。应用读 `待澄清` 长度判断是否收敛。
+应用读 `clarifications` 长度判断是否收敛。
