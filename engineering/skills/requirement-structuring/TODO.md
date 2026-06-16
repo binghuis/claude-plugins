@@ -30,7 +30,7 @@
 - [ ] 验证点 1：待澄清揪得准不准——该问的揪到没？不该问的有没有乱问？
 - [ ] 验证点 2：三分判断稳不稳——同一需求多跑结果一致吗？
 - [ ] 验证点 3：产出格式下游 ~20 个 skill 接得住吗？
-- [ ] 根据跑出的问题改 `references/certainty-criteria.md` 和 `references/output-schema.md`
+- [ ] 根据跑出的问题改 `SKILL.md` 和 `references/output-schema.md`
 
 ---
 
