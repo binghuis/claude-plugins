@@ -59,3 +59,4 @@ disable-model-invocation: true
 | description 不要用"帮助用户…""提供…" | description 用强祈使句 + 触发条件 |
 | 不要解释 "skill 是什么""如何被加载" | 直接给指令，不讲元信息 |
 | 不要用装饰性 emoji、分隔线、冗余标题、纯强调用的加粗斜体 | 标题只用于分节，强调靠措辞不靠样式 |
+| 不要用 ASCII 树画判定 / 分流 | 用嵌套 markdown bullet |
