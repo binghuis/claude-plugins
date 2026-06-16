@@ -7,7 +7,7 @@
 ## 架构现状
 
 - `requirement-structuring` 是纯无状态函数：一段需求文本 → 三分清单
-- 循环 / 问人 / 答案合并 / diff / 拆分 → 应用层 SDK（见 `references/orchestration.md`）
+- 循环 / 问人 / 答案合并 / diff / 拆分 → 应用层 SDK（见 `docs/orchestration.md`）
 - 答案合并采用"追加文本"路径：把已澄清段拼回原始需求，下一轮全量重跑
 
 ---
@@ -16,7 +16,7 @@
 
 不验通编排，skill 写得再细都不可靠。
 
-- [ ] 用 Claude SDK 实现 `references/orchestration.md` 的伪代码骨架
+- [ ] 用 Claude SDK 实现 `docs/orchestration.md` 的伪代码骨架
 - [ ] 定义 tool schema：`ask_pm`、`submit_doc`
 - [ ] 定义 structured output JSON schema（对齐 `references/output-schema.md`）
 - [ ] 拿 1 个真实需求跑通端到端：structuring → ask → 拼答案 → 再 structuring → 收敛
