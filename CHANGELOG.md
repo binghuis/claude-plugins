@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-29
+
+### 新增
+- **report 插件新增 weekly-report-team skill：写团队 / 负责人周报时触发，自动按 author 聚合全员 git 提交、拉飞书日程 / 面试 / 需求数据，加工成交付物并对照上周计划，套模板成稿（业务线版本迭代 / 团队管理 / 问题待拍板 / 下周计划 / 数据附录）**
+
+### 移除
+- **engineering 插件整体下线（含 requirement-structuring skill：把产品自然语言需求拆成"确定 / 待澄清 / 可默认"三分清单）**
+
 ## 2026-06-16
 
 ### 优化
@@ -7,7 +15,7 @@
 - engineering requirement-structuring skill 业务/非业务过滤口径调整：交互、文案默认由 AI 处理（除非 PM 明示），非需求仅保留"视觉细节"（此前把交互、文案也归非需求，与"PM 明示即需求"的边界不清）
 - meta skill-gen 新增规则禁用 ASCII 树（├─ └─）画判定 / 分流分支，统一用嵌套 markdown bullet
 - engineering requirement-structuring skill 输出由中文 markdown 模板改为英文 JSON，字段名英文化，下游 SDK 编排可直接解析（此前需正则解析结构化 markdown）
-- **engineering requirement-structuring skill JSON schema 大幅精简：删除 boundaries / exceptions / uiReference / meta 等字段，Q/D/T 仅保留核心属性，任务阻塞由消费方按依赖里是否含 Q 自行推导；同步下线 docs/orchestration.md（SDK 编排指引迁出 skill 仓库）**
+- engineering requirement-structuring skill JSON schema 大幅精简：删除 boundaries / exceptions / uiReference / meta 等字段，Q/D/T 仅保留核心属性，任务阻塞由消费方按依赖里是否含 Q 自行推导；同步下线 docs/orchestration.md（SDK 编排指引迁出 skill 仓库）
 
 ## 2026-06-15
 
