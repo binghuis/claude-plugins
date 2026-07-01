@@ -1,0 +1,5 @@
+{
+  "name": "report",
+  "version": "0.1.0",
+  "description": "周报工具包：按 git + 飞书数据聚成交付物，套模板成稿"
+}

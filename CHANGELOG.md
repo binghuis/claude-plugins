@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-07-01
+
+### 新增
+- **新增 feishu 插件：飞书数据 IO 按授权域拆成两个 skill —— lark-io（文档正文 wiki→docx / 日程，lark-mcp 授权）、feishu-project（需求 / 排期工时，MQL 授权）；调用链参数化，团队专属值（project_key / user_keys / 业务线 / 版本号 / 选取规则）留在调用方**
+
+### 优化
+- **weekly-report-team 数据盘点段的飞书调用签名迁到 lark-io / feishu-project，本地只留团队参数（project_key=ccu47f / 业务线=翻译中台 / MQL / 版本号选取规则）**
+- **report 插件补进 marketplace.json；移除已下线的 engineering 幽灵条目**
+
 ## 2026-06-29
 
 ### 新增

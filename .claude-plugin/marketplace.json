@@ -30,9 +30,14 @@
       "description": "通用工作流指令集：do 等"
     },
     {
-      "name": "engineering",
-      "source": "./engineering",
-      "description": "AI 工程化全链路：需求结构化 / figma / 测试用例 / 代码生成"
+      "name": "report",
+      "source": "./report",
+      "description": "周报工具包：按 git + 飞书数据聚成交付物，套模板成稿"
+    },
+    {
+      "name": "feishu",
+      "source": "./feishu",
+      "description": "飞书数据 IO：文档正文 / 日程 / 需求 / 排期的最小调用链，供别的 skill 引用"
     }
   ]
 }

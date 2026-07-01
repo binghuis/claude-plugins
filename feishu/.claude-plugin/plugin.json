@@ -1,0 +1,5 @@
+{
+  "name": "feishu",
+  "version": "0.1.0",
+  "description": "飞书数据 IO：文档正文 / 日程 / 需求 / 排期的最小调用链，供别的 skill 引用"
+}
